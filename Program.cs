@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Galaxies_and_Planets
 {
@@ -13,32 +14,52 @@ namespace Galaxies_and_Planets
             //string input = Console.ReadLine();
             //string[] inputSubs = input.Split();
 
-           // foreach (string sub in inputSubs)
+            // foreach (string sub in inputSubs)
             //{
             //    Console.WriteLine($"Subsstring {sub}");
             //}
 
-           // if (inputSubs[0] == "as")
+            // if (inputSubs[0] == "as")
             //{
             //    Console.WriteLine("qsha");
             //}
 
-            static void startGame()
+            //static void startGame()
+            //{
+            //  List<string> ls = new List<string>();
+            //  string sentence = Console.ReadLine();
+            //  string[] sentenceSplit = sentence.Split();
+            // if (sentenceSplit[0] == "add")
+            // {
+            //    Console.WriteLine("It was added");
+            //     ls.Add(sentence);
+            //    Console.WriteLine(ls);
+            //    startGame();
+            //  }
+            //  else if (sentenceSplit[0] == "exit")
+            //  {
+
+            // }
+            //}
+
+            // startGame();
+
+            Boolean isGamePlaying = true;
+
+            while (isGamePlaying)
             {
                 string sentence = Console.ReadLine();
                 string[] sentenceSplit = sentence.Split();
-                if (sentenceSplit[0] == "add")
+                if(sentenceSplit[0] == "add")
                 {
-                    Console.WriteLine("It was added");
-                    startGame();
-                }
-                else
+                    Console.WriteLine("This time it way work");
+                    continue;
+                }else if(sentenceSplit[0] == "exit")
                 {
-                    startGame();
+                    Console.WriteLine("That was boyts");
+                    isGamePlaying = false;
                 }
             }
-
-            startGame();
         }
     }
 }
