@@ -52,6 +52,7 @@ namespace Galaxies_and_Planets
                 string[] sentenceSplit = sentence.Split();
                 if(sentenceSplit[0] == "add")
                 {
+                    Console.WriteLine(sentenceSplit[3]);
                     Console.WriteLine("This time it way work");
                     continue;
                 }else if(sentenceSplit[0] == "exit")
