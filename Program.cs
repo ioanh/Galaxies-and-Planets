@@ -6,7 +6,19 @@ namespace Galaxies_and_Planets
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            string input = Console.ReadLine();
+            string[] inputSubs = input.Split();
+
+            foreach (string sub in inputSubs)
+            {
+                Console.WriteLine($"Subsstring {sub}");
+            }
+
+            if (inputSubs[0] == "as")
+            {
+                Console.WriteLine("qsha");
+            }
         }
     }
 }
