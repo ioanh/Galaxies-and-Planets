@@ -1,0 +1,13 @@
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.exe
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.deps.json
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.runtimeconfig.json
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.runtimeconfig.dev.json
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.dll
+E:\ме\C#\Galaxies and Planets\bin\Debug\netcoreapp3.1\Galaxies and Planets.pdb
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.csprojAssemblyReference.cache
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.AssemblyInfoInputs.cache
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.AssemblyInfo.cs
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.csproj.CoreCompileInputs.cache
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.dll
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.pdb
+E:\ме\C#\Galaxies and Planets\obj\Debug\netcoreapp3.1\Galaxies and Planets.genruntimeconfig.cache

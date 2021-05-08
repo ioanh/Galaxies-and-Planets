@@ -2,23 +2,43 @@
 
 namespace Galaxies_and_Planets
 {
+    public class Planet
+    {
+    }
     class Program
     {
         static void Main(string[] args)
         {
 
-            string input = Console.ReadLine();
-            string[] inputSubs = input.Split();
+            //string input = Console.ReadLine();
+            //string[] inputSubs = input.Split();
 
-            foreach (string sub in inputSubs)
+           // foreach (string sub in inputSubs)
+            //{
+            //    Console.WriteLine($"Subsstring {sub}");
+            //}
+
+           // if (inputSubs[0] == "as")
+            //{
+            //    Console.WriteLine("qsha");
+            //}
+
+            static void startGame()
             {
-                Console.WriteLine($"Subsstring {sub}");
+                string sentence = Console.ReadLine();
+                string[] sentenceSplit = sentence.Split();
+                if (sentenceSplit[0] == "add")
+                {
+                    Console.WriteLine("It was added");
+                    startGame();
+                }
+                else
+                {
+                    startGame();
+                }
             }
 
-            if (inputSubs[0] == "as")
-            {
-                Console.WriteLine("qsha");
-            }
+            startGame();
         }
     }
 }
