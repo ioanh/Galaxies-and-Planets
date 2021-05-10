@@ -18,6 +18,7 @@ namespace Galaxies_and_Planets
             return result;
         }
     }
+    // CREATING THE GALAXIES, STARS, PLANETS, MOONS CLASSES
     public class Galaxy
     {
         public string GalaxyName;
@@ -76,6 +77,8 @@ namespace Galaxies_and_Planets
             MoonName = name;
         }
     }
+    // EDNING OF CREATING THE GALAXIES, STARS, PLANETS, MOONS CLASSES
+
     class Program
     {
         static void Main(string[] args)
@@ -96,7 +99,7 @@ namespace Galaxies_and_Planets
 
                 //STARTING
 
-                //ADDING 
+                //ADDING THE GALAXY, STAR, PLANET, EARTH
                 if(sentenceSplit[0] == "add")
                 {
                     if(sentenceSplit[1] == "galaxy")
@@ -123,17 +126,17 @@ namespace Galaxies_and_Planets
 
                 }else if(sentenceSplit[0] == "exit")
                 {
-                    //END OF GAME
+                    //END OF GAME, THIS SHOULD BE AT THE BOTTOM BUT I DECEIDED IT THIS WAT
                     Console.WriteLine("YOU HAVE SHUT DOWN THE APP");
                     isGamePlaying = false;
                 }else if(sentenceSplit[0] == "stats")
                 {
-                    //STATS
+                    //STATS FOR GALAXIES, STARS, PLANETS, MOONS
                     Console.WriteLine($"----STATS---- \n Galaxies: {gArr.Length} \n Stars: {sArr.Length} \n Planets: {pArr.Length} \n Moons: {mArr.Length} \n ----END OF STATS----");
                     continue;
                 }else if (sentenceSplit[0] == "list")
                 {
-                    //LIST
+                    //LISTING GALAXIES ETC.
                     if(sentenceSplit[1] == "galaxies")
                     {
                         Console.WriteLine($"---LIST GALAXIES--- \n ");
@@ -174,22 +177,25 @@ namespace Galaxies_and_Planets
                     }
                 }else if (sentenceSplit[0] == "print")
                 {
-                    //PRINT (WHEN THE CAFFEINE KICKS IN 12:35 AM)
+                    //PRINT GALAXY DETAILS (WHEN THE CAFFEINE KICKS IN 12:35 AM)
                     foreach (Galaxy galaxy in gArr)
                     {
                         if(galaxy.GalaxyName == sentenceSplit[1])
                         {
                             Console.WriteLine($"---Data for {galaxy.GalaxyName}--- \n Type: {galaxy.GalaxyType} \n Age: {galaxy.GalaxyAge} \n Stars:");
+                            //CHECKING FOR STARS IN THE GALAXY
                             foreach(Star star in sArr)
                             {
                                 if(star.StarGalaxyName == galaxy.GalaxyName)
                                 {
                                     Console.WriteLine($"Star Name: {star.StarName} \n Star Class: {star.StarMass}, {star.StarSize}, {star.StarTemp}, {star.StarLuminosity}");
+                                    //CHECKING FOR PLANETS IN THE STAR SYSTEM
                                     foreach(Planet planet in pArr)
                                     {
                                         if(planet.PlanetStarName == star.StarName)
                                         {
                                             Console.WriteLine($"Planet Name: {planet.PlanetName} \n {planet.PlanetType} \n Support life: {planet.SupportLife}");
+                                            //CHECKING FOR MOONS IN THE PLANET ORBIT
                                             foreach(Moon moon in mArr)
                                             {
                                                 if(moon.MoonPlanet == planet.PlanetName)
@@ -202,7 +208,7 @@ namespace Galaxies_and_Planets
                                     }
                                 }
                             }
-                            Console.WriteLine($"--- END DATA FOR {galaxy.GalaxyName}");
+                            Console.WriteLine($"--- END DATA FOR {galaxy.GalaxyName}---");
                             continue;
                         }
                     }
