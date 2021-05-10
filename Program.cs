@@ -184,12 +184,12 @@ namespace Galaxies_and_Planets
                             {
                                 if(star.StarGalaxyName == galaxy.GalaxyName)
                                 {
-                                    Console.WriteLine($"Name: {star.StarName} \n Class: {star.StarMass}, {star.StarSize}, {star.StarTemp}, {star.StarLuminosity}");
+                                    Console.WriteLine($"Star Name: {star.StarName} \n Star Class: {star.StarMass}, {star.StarSize}, {star.StarTemp}, {star.StarLuminosity}");
                                     foreach(Planet planet in pArr)
                                     {
                                         if(planet.PlanetStarName == star.StarName)
                                         {
-                                            Console.WriteLine($"Name: {planet.PlanetName} \n {planet.PlanetType} \n Support life: {planet.SupportLife}");
+                                            Console.WriteLine($"Planet Name: {planet.PlanetName} \n {planet.PlanetType} \n Support life: {planet.SupportLife}");
                                             foreach(Moon moon in mArr)
                                             {
                                                 if(moon.MoonPlanet == planet.PlanetName)
@@ -202,6 +202,7 @@ namespace Galaxies_and_Planets
                                     }
                                 }
                             }
+                            Console.WriteLine($"--- END DATA FOR {galaxy.GalaxyName}");
                             continue;
                         }
                     }
