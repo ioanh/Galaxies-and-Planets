@@ -3,61 +3,74 @@ using System.Collections.Generic;
 
 namespace Galaxies_and_Planets
 {
+    public class Galaxy
+    {
+        public string GalaxyName;
+        public string GalaxyType;
+        public string GalaxyAge;
+
+        public Galaxy(string name, string type, string age)
+        {
+            GalaxyName = name;
+            GalaxyType = type;
+            GalaxyAge = age;
+        }
+    }
+
+    public class Star
+    {
+        public string StarGalaxyName;
+        public string StarName;
+        public decimal StarMass;
+        public decimal StarSize;
+        public int StarTemp;
+        public string StarLuminosity;
+
+        public Star(string gname, string name, decimal mass, decimal size, int temp, string luminosity)
+        {
+            StarGalaxyName = gname;
+            StarName = name;
+            StarMass = mass;
+            StarSize = size;
+            StarTemp = temp;
+            StarLuminosity = luminosity;
+        }
+    }
     public class Planet
     {
+        public string PlanetStarName;
+        public string PlanetName;
+        public string PlanetType;
+        public string SupportLife;
+
+        public Planet(string starname, string name, string type, string supportlife)
+        {
+            PlanetStarName = starname;
+            PlanetName = name;
+            PlanetType = type;
+            SupportLife = supportlife;
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
 
-            //string input = Console.ReadLine();
-            //string[] inputSubs = input.Split();
-
-            // foreach (string sub in inputSubs)
-            //{
-            //    Console.WriteLine($"Subsstring {sub}");
-            //}
-
-            // if (inputSubs[0] == "as")
-            //{
-            //    Console.WriteLine("qsha");
-            //}
-
-            //static void startGame()
-            //{
-            //  List<string> ls = new List<string>();
-            //  string sentence = Console.ReadLine();
-            //  string[] sentenceSplit = sentence.Split();
-            // if (sentenceSplit[0] == "add")
-            // {
-            //    Console.WriteLine("It was added");
-            //     ls.Add(sentence);
-            //    Console.WriteLine(ls);
-            //    startGame();
-            //  }
-            //  else if (sentenceSplit[0] == "exit")
-            //  {
-
-            // }
-            //}
-
-            // startGame();
-
             Boolean isGamePlaying = true;
 
             while (isGamePlaying)
             {
+                //TAKING INPUT
                 string sentence = Console.ReadLine();
                 string[] sentenceSplit = sentence.Split();
+
+
+                //STARTING
                 if(sentenceSplit[0] == "add")
                 {
-                    Console.WriteLine(sentenceSplit[3]);
-                    Console.WriteLine("This time it way work");
                     continue;
                 }else if(sentenceSplit[0] == "exit")
                 {
-                    Console.WriteLine("That was boyts");
                     isGamePlaying = false;
                 }
             }
