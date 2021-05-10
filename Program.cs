@@ -124,6 +124,7 @@ namespace Galaxies_and_Planets
                 }else if(sentenceSplit[0] == "exit")
                 {
                     //END OF GAME
+                    Console.WriteLine("YOU HAVE SHUT DOWN THE APP");
                     isGamePlaying = false;
                 }else if(sentenceSplit[0] == "stats")
                 {
