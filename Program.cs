@@ -84,6 +84,8 @@ namespace Galaxies_and_Planets
             Boolean isGamePlaying = true;
             Galaxy[] gArr = { };
             Star[] sArr = { };
+            Planet[] pArr = { };
+            Moon[] mArr = { };
 
             while (isGamePlaying)
             {
@@ -107,10 +109,25 @@ namespace Galaxies_and_Planets
                         sArr = sArr.Append(newStar);
                         Console.WriteLine(sArr.Length);
                         continue;
+                    }else if(sentenceSplit[1] == "planet")
+                    {
+                        Planet newPlanet = new Planet(sentenceSplit[2], sentenceSplit[3], sentenceSplit[4], sentenceSplit[5]);
+                        pArr = pArr.Append(newPlanet);
+                        Console.WriteLine(pArr.Length);
+                        continue;
+                    }else if(sentenceSplit[1] == "moon")
+                    {
+                        Moon newMoon = new Moon(sentenceSplit[2], sentenceSplit[3]);
+                        mArr = mArr.Append(newMoon);
+                        Console.WriteLine(mArr.Length);
+                        continue;
                     }
                 }else if(sentenceSplit[0] == "exit")
                 {
                     isGamePlaying = false;
+                }else if(sentenceSplit[0] == "stats")
+                {
+                    Console.WriteLine($"----STATS---- \n Galaxies: {gArr.Length} \n Stars: {sArr.Length} \n Planets: {pArr.Length} \n Moons: {mArr.Length} \n ----END OF STATS----");
                 }
             }
         }
