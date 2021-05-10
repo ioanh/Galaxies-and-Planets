@@ -103,25 +103,21 @@ namespace Galaxies_and_Planets
                     {
                         Galaxy newGalaxy = new Galaxy(sentenceSplit[2], sentenceSplit[3], sentenceSplit[4]);
                         gArr = gArr.Append(newGalaxy);
-                        Console.WriteLine(gArr.Length);
                         continue;
                     }else if(sentenceSplit[1] == "star")
                     {
                         Star newStar = new Star(sentenceSplit[2], sentenceSplit[3], Decimal.Parse(sentenceSplit[4]), Decimal.Parse(sentenceSplit[5]), int.Parse(sentenceSplit[6]), Decimal.Parse(sentenceSplit[7]) );
                         sArr = sArr.Append(newStar);
-                        Console.WriteLine(sArr.Length);
                         continue;
                     }else if(sentenceSplit[1] == "planet")
                     {
                         Planet newPlanet = new Planet(sentenceSplit[2], sentenceSplit[3], sentenceSplit[4], sentenceSplit[5]);
                         pArr = pArr.Append(newPlanet);
-                        Console.WriteLine(pArr.Length);
                         continue;
                     }else if(sentenceSplit[1] == "moon")
                     {
                         Moon newMoon = new Moon(sentenceSplit[2], sentenceSplit[3]);
                         mArr = mArr.Append(newMoon);
-                        Console.WriteLine(mArr.Length);
                         continue;
                     }
 
@@ -144,6 +140,31 @@ namespace Galaxies_and_Planets
                         {
                             Console.WriteLine($"{galaxy.GalaxyName}\n ");
                         }
+                        continue;
+                    }else if (sentenceSplit[1] == "stars")
+                    {
+                        Console.WriteLine($"---LIST STARS--- \n ");
+                        foreach(Star star in sArr)
+                        {
+                            Console.WriteLine($"{star.StarName}\n ");
+                        }
+                        continue;
+                    }else if(sentenceSplit[1] == "planets")
+                    {
+                        Console.WriteLine($"---LIST PLANETS--- \n ");
+                        foreach (Planet planet in pArr)
+                        {
+                            Console.WriteLine($"{planet.PlanetName}\n ");
+                        }
+                        continue;
+                    }else if(sentenceSplit[1] == "moons")
+                    {
+                        Console.WriteLine($"---LIST MOONS--- \n ");
+                        foreach (Moon moon in mArr)
+                        {
+                            Console.WriteLine($"{moon.MoonName}\n ");
+                        }
+                        continue;
                     }
                 }
             }
