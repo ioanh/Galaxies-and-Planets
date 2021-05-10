@@ -140,6 +140,8 @@ namespace Galaxies_and_Planets
                         {
                             Console.WriteLine($"{galaxy.GalaxyName}\n ");
                         }
+                        Console.WriteLine($"--- END LIST GALAXIES--- \n ");
+
                         continue;
                     }else if (sentenceSplit[1] == "stars")
                     {
@@ -148,6 +150,7 @@ namespace Galaxies_and_Planets
                         {
                             Console.WriteLine($"{star.StarName}\n ");
                         }
+                        Console.WriteLine($"---END LIST STARS--- \n ");
                         continue;
                     }else if(sentenceSplit[1] == "planets")
                     {
@@ -156,6 +159,7 @@ namespace Galaxies_and_Planets
                         {
                             Console.WriteLine($"{planet.PlanetName}\n ");
                         }
+                        Console.WriteLine($"--- END LIST PLANETS--- \n ");
                         continue;
                     }else if(sentenceSplit[1] == "moons")
                     {
@@ -164,6 +168,7 @@ namespace Galaxies_and_Planets
                         {
                             Console.WriteLine($"{moon.MoonName}\n ");
                         }
+                        Console.WriteLine($"---END LIST MOONS--- \n ");
                         continue;
                     }
                 }
