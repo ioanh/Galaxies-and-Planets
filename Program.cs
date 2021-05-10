@@ -39,9 +39,9 @@ namespace Galaxies_and_Planets
         public decimal StarMass;
         public decimal StarSize;
         public int StarTemp;
-        public string StarLuminosity;
+        public decimal StarLuminosity;
 
-        public Star(string gname, string name, decimal mass, decimal size, int temp, string luminosity)
+        public Star(string gname, string name, decimal mass, decimal size, int temp, decimal luminosity)
         {
             StarGalaxyName = gname;
             StarName = name;
@@ -83,6 +83,7 @@ namespace Galaxies_and_Planets
 
             Boolean isGamePlaying = true;
             Galaxy[] gArr = { };
+            Star[] sArr = { };
 
             while (isGamePlaying)
             {
@@ -99,6 +100,12 @@ namespace Galaxies_and_Planets
                         Galaxy newGalaxy = new Galaxy(sentenceSplit[2], sentenceSplit[3], sentenceSplit[4]);
                         gArr = gArr.Append(newGalaxy);
                         Console.WriteLine(gArr.Length);
+                        continue;
+                    }else if(sentenceSplit[1] == "star")
+                    {
+                        Star newStar = new Star(sentenceSplit[2], sentenceSplit[3], Decimal.Parse(sentenceSplit[4]), Decimal.Parse(sentenceSplit[5]), int.Parse(sentenceSplit[6]), Decimal.Parse(sentenceSplit[7]) );
+                        sArr = sArr.Append(newStar);
+                        Console.WriteLine(sArr.Length);
                         continue;
                     }
                 }else if(sentenceSplit[0] == "exit")
