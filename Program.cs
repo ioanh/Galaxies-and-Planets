@@ -51,6 +51,16 @@ namespace Galaxies_and_Planets
             SupportLife = supportlife;
         }
     }
+    public class Moon
+    {
+        public string MoonPlanet;
+        public string MoonName;
+        public Moon(string planet, string name)
+        {
+            MoonPlanet = planet;
+            MoonName = name;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
