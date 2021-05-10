@@ -80,7 +80,7 @@ namespace Galaxies_and_Planets
     {
         static void Main(string[] args)
         {
-
+            //VARIABLES AND ARRAYS
             Boolean isGamePlaying = true;
             Galaxy[] gArr = { };
             Star[] sArr = { };
@@ -95,6 +95,8 @@ namespace Galaxies_and_Planets
 
 
                 //STARTING
+
+                //ADDING 
                 if(sentenceSplit[0] == "add")
                 {
                     if(sentenceSplit[1] == "galaxy")
@@ -122,12 +124,27 @@ namespace Galaxies_and_Planets
                         Console.WriteLine(mArr.Length);
                         continue;
                     }
+
                 }else if(sentenceSplit[0] == "exit")
                 {
+                    //END OF GAME
                     isGamePlaying = false;
                 }else if(sentenceSplit[0] == "stats")
                 {
+                    //STATS
                     Console.WriteLine($"----STATS---- \n Galaxies: {gArr.Length} \n Stars: {sArr.Length} \n Planets: {pArr.Length} \n Moons: {mArr.Length} \n ----END OF STATS----");
+                    continue;
+                }else if (sentenceSplit[0] == "list")
+                {
+                    //LIST
+                    if(sentenceSplit[1] == "galaxies")
+                    {
+                        Console.WriteLine($"---LIST GALAXIES--- \n ");
+                        foreach (Galaxy galaxy in gArr)
+                        {
+                            Console.WriteLine($"{galaxy.GalaxyName}\n ");
+                        }
+                    }
                 }
             }
         }
