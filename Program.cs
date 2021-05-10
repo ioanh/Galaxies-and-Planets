@@ -195,6 +195,7 @@ namespace Galaxies_and_Planets
                                                 if(moon.MoonPlanet == planet.PlanetName)
                                                 {
                                                     Console.WriteLine($"Moons: {moon.MoonName}");
+                                                    continue;
                                                 }
                                             }
                                         }
