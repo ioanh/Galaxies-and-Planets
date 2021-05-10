@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Galaxies_and_Planets
 {
-    //USING APPEND FROM WEB TO APPEND TO ARRAY, BCS IM JS NOOB <3 
+    //USING APPEND FROM WEB TO IMMITATE Array.Push(item) <3 
     public static class Extensions
     {
         public static T[] Append<T>(this T[] array, T item)
@@ -171,6 +171,38 @@ namespace Galaxies_and_Planets
                         }
                         Console.WriteLine($"---END LIST MOONS--- \n ");
                         continue;
+                    }
+                }else if (sentenceSplit[0] == "print")
+                {
+                    //PRINT (WHEN THE CAFFEINE KICKS IN 12:35 AM)
+                    foreach (Galaxy galaxy in gArr)
+                    {
+                        if(galaxy.GalaxyName == sentenceSplit[1])
+                        {
+                            Console.WriteLine($"---Data for {galaxy.GalaxyName}--- \n Type: {galaxy.GalaxyType} \n Age: {galaxy.GalaxyAge} \n Stars:");
+                            foreach(Star star in sArr)
+                            {
+                                if(star.StarGalaxyName == galaxy.GalaxyName)
+                                {
+                                    Console.WriteLine($"Name: {star.StarName} \n Class: {star.StarMass}, {star.StarSize}, {star.StarTemp}, {star.StarLuminosity}");
+                                    foreach(Planet planet in pArr)
+                                    {
+                                        if(planet.PlanetStarName == star.StarName)
+                                        {
+                                            Console.WriteLine($"Name: {planet.PlanetName} \n {planet.PlanetType} \n Support life: {planet.SupportLife}");
+                                            foreach(Moon moon in mArr)
+                                            {
+                                                if(moon.MoonPlanet == planet.PlanetName)
+                                                {
+                                                    Console.WriteLine($"Moons: {moon.MoonName}");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            continue;
+                        }
                     }
                 }
             }
