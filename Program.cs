@@ -3,6 +3,21 @@ using System.Collections.Generic;
 
 namespace Galaxies_and_Planets
 {
+    //USING APPEND FROM WEB TO APPEND TO ARRAY, BCS IM JS NOOB <3 
+    public static class Extensions
+    {
+        public static T[] Append<T>(this T[] array, T item)
+        {
+            if (array == null)
+            {
+                return new T[] { item };
+            }
+            T[] result = new T[array.Length + 1];
+            array.CopyTo(result, 0);
+            result[array.Length] = item;
+            return result;
+        }
+    }
     public class Galaxy
     {
         public string GalaxyName;
@@ -67,6 +82,7 @@ namespace Galaxies_and_Planets
         {
 
             Boolean isGamePlaying = true;
+            Galaxy[] gArr = { };
 
             while (isGamePlaying)
             {
@@ -78,7 +94,13 @@ namespace Galaxies_and_Planets
                 //STARTING
                 if(sentenceSplit[0] == "add")
                 {
-                    continue;
+                    if(sentenceSplit[1] == "galaxy")
+                    {
+                        Galaxy newGalaxy = new Galaxy(sentenceSplit[2], sentenceSplit[3], sentenceSplit[4]);
+                        gArr = gArr.Append(newGalaxy);
+                        Console.WriteLine(gArr.Length);
+                        continue;
+                    }
                 }else if(sentenceSplit[0] == "exit")
                 {
                     isGamePlaying = false;
